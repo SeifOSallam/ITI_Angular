@@ -1,0 +1,13 @@
+<div class="mt-5 d-flex flex-wrap">
+    @for (user of users; track user.id) {
+        <div class="card w-25 d-flex justify-content-center align-items-center flex-column border-0" style="height:200px">
+            <div class="w-75 h-75 card d-flex flex-column align-items-center border-0 shadow bg-secondary text-white">
+                <img [src]="user.image" alt="" class="border" style="width:50px; border-radius: 100px;">
+                <div>{{user.username}}</div>
+                <div>{{user.email}}</div>
+                <div>{{user.phone}}</div>
+                <div><i class="fas fa-star" [style.color]="user.is_verified?'green':'red'"></i></div>
+            </div>
+        </div>
+    }
+</div>
