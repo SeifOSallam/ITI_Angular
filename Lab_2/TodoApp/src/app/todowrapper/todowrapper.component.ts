@@ -10,9 +10,10 @@ import { TodoformComponent } from '../todoform/todoform.component';
   styleUrl: './todowrapper.component.css'
 })
 export class TodowrapperComponent {
-  @Input() todos : string[] = [];
+  todos : string[] = [];
 
   insertTodo(todo : string) {
-    this.todos.push(todo);
+    if (todo.trim() != "")
+      this.todos.push(todo);
   }
 }
